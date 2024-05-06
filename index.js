@@ -1,8 +1,6 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk";
-let condition = true;
-while (condition) {
     let adventure = await inquirer.prompt([{
             name: "start",
             type: "input",
@@ -55,11 +53,6 @@ while (condition) {
         else {
             console.log(chalk.red("you chosse the wrong place"));
         }
-        let again = await inquirer.prompt([{
-                name: "gain",
-                type: "confirm",
-                message: "Try again"
-            }]);
-        condition = again.gain;
+        
     }
-}
+
